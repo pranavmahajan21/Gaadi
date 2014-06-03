@@ -1,0 +1,148 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jobsheet_SV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- android:background="#FF0000" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Register Your Vehicle"
+            android:textSize="20sp"
+            android:typeface="serif" />
+
+        <EditText
+            android:id="@+id/chassis_ET"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:hint="Chassis No" />
+
+        <EditText
+            android:id="@+id/registration_ET"
+            style="@style/EditTextStyle"
+            android:hint="Registration No" />
+
+        <EditText
+            android:id="@+id/name_ET"
+            style="@style/EditTextStyle"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/mobile_ET"
+            style="@style/EditTextStyle"
+            android:hint="Mobile No"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/email_ET"
+            style="@style/EditTextStyle"
+            android:hint="Email ID" />
+        <!-- android:inputType="e" -->
+
+
+        <!--
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Select a service center:"
+            android:textSize="18sp"
+            android:typeface="serif" />
+
+        <Spinner
+            android:id="@+id/serviceCenter_Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+
+            <EditText
+                android:id="@+id/startDate_ET"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight=".5"
+                android:background="@drawable/custom_bg_grey_radius"
+                android:gravity="center"
+                android:hint="start date"
+                android:inputType="date"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/startTime_ET"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight=".5"
+                android:background="@drawable/custom_bg_grey_radius"
+                android:gravity="center"
+                android:hint="start time"
+                android:maxLines="1" />
+        </LinearLayout> 
+        
+		<LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <EditText
+                android:id="@+id/endDate_ET"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".5"
+                android:background="@drawable/custom_bg_grey_radius"
+                android:gravity="center"
+                android:hint="end date"
+                android:maxLines="1"
+                android:textColor="#0669b1" />
+
+            <EditText
+                android:id="@+id/endTime_ET"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".5"
+                android:background="@drawable/custom_bg_grey_radius"
+                android:gravity="center"
+                android:hint="end time"
+                android:maxLines="1"
+                android:textColor="#0669b1" />
+        </LinearLayout>
+        -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:onClick="onSave"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="10dp"
+            android:text="Save" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/job_details_RL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- android:padding="20dp" -->
+
+    <TextView
+        android:id="@+id/chassis_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Chassis ID"
+        android:textSize="20sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/chassis_ET"
+        style="@style/EditTextStyle"
+        android:layout_below="@+id/chassis_TV"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/custom_bg_opaque_radius" />
+    <!--
+             android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:typeface="serif"
+    -->
+
+    <TextView
+        android:id="@+id/cost_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chassis_ET"
+        android:layout_margin="15dp"
+        android:text="Cost Estimate"
+        android:textSize="20sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/cost_ET"
+        android:inputType="number"
+        style="@style/EditTextStyle"
+        android:layout_below="@+id/cost_TV"
+        android:layout_marginTop="0dp" />
+
+    <EditText
+        style="@style/EditTextStyle"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/cost_ET"
+        android:gravity="top"
+        android:hint="Notes..."
+        android:layout_above="@+id/respond_Button" />
+
+    <Button
+        android:id="@+id/respond_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"        
+        android:onClick="onRespond"
+        android:text="Respond" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mw.biker.MainActivity" >
+
+    <item
+        android:id="@+id/respond_menu_item"
+        android:orderInCategory="100"
+        android:title="Respond"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/logout_menu_item"
+        android:orderInCategory="100"
+        android:title="Logout"
+        app:showAsAction="never"/>
+</menu>

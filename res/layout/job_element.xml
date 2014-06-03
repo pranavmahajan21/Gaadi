@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_toLeftOf="@+id/tick_IV"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/chassis_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chassis Number"
+            android:textSize="20sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/date_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chassis_TV"
+            android:layout_marginTop="5dp"
+            android:text="date"
+            android:textSize="18sp"
+            android:typeface="serif" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/tick_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tick_mark_black" />
+
+</RelativeLayout>
