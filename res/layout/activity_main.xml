@@ -142,7 +142,9 @@
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
             android:paddingTop="10dp"
-            android:text="Save" />
+            android:text="Save"
+            android:textSize="20sp"
+            android:typeface="serif" />
     </LinearLayout>
 
 </ScrollView>

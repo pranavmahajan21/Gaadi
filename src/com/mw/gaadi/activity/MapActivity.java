@@ -8,6 +8,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
@@ -110,12 +111,12 @@ public class MapActivity extends Activity {
 						// Toast.makeText(MapActivity.this,
 						// "success", Toast.LENGTH_SHORT)
 						// .show();
-//						 nextIntent = new Intent(
-//						 MapActivity.this,
-//						 MainActivity.class);
-//						 startActivity(nextIntent);
-//						 }
-//						 });
+						// nextIntent = new Intent(
+						// MapActivity.this,
+						// MainActivity.class);
+						// startActivity(nextIntent);
+						// }
+						// });
 					} else {
 						Toast.makeText(MapActivity.this, "no address : " + i,
 								Toast.LENGTH_SHORT).show();
@@ -174,10 +175,10 @@ public class MapActivity extends Activity {
 	}
 
 	public static int getPixelsFromDp(Context context, float dp) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int)(dp * scale + 0.5f);
-    }
-	
+		final float scale = context.getResources().getDisplayMetrics().density;
+		return (int) (dp * scale + 0.5f);
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -197,7 +198,7 @@ public class MapActivity extends Activity {
 
 		final MapWrapperLayout mapWrapperLayout = (MapWrapperLayout) findViewById(R.id.map_relative_layout);
 		mapWrapperLayout.init(googleMap, getPixelsFromDp(this, 39 + 20));
-		
+
 		this.infoWindow = (ViewGroup) getLayoutInflater().inflate(
 				R.layout.map_custom_info_window, null);
 		this.infoTitleTV = (TextView) infoWindow.findViewById(R.id.title_TV);
@@ -206,8 +207,8 @@ public class MapActivity extends Activity {
 		this.infoButton = (Button) infoWindow.findViewById(R.id.contact_B);
 
 		this.infoButtonListener = new OnInfoWindowElemTouchListener(infoButton,
-				getResources().getDrawable(R.drawable.custom_bg_grey),
-				getResources().getDrawable(R.drawable.custom_bg_grey)) {
+				getResources().getDrawable(R.drawable.custom_bg_opaque_radius),
+				getResources().getDrawable(R.drawable.custom_bg_opaque_radius)) {
 			@Override
 			protected void onClickConfirmed(View v, Marker marker) {
 				// Here we can perform some action triggered after clicking the
@@ -215,12 +216,10 @@ public class MapActivity extends Activity {
 				Toast.makeText(MapActivity.this,
 						marker.getTitle() + "'s button clicked!",
 						Toast.LENGTH_SHORT).show();
-				
-				nextIntent = new Intent(
-						 MapActivity.this,
-						 MainActivity.class);
-						 startActivity(nextIntent);
-						 
+
+				nextIntent = new Intent(MapActivity.this, MainActivity.class);
+				startActivity(nextIntent);
+
 			}
 		};
 		this.infoButton.setOnTouchListener(infoButtonListener);
@@ -235,6 +234,7 @@ public class MapActivity extends Activity {
 			public View getInfoContents(Marker marker) {
 				// Setting up the infoWindow with current's marker info
 				infoTitleTV.setText(marker.getTitle());
+				infoTitleTV.setTypeface(Typeface.SERIF, Typeface.BOLD);
 				infoSnippet.setText(marker.getSnippet());
 				infoPhone.setText("9898989898");
 				infoButtonListener.setMarker(marker);

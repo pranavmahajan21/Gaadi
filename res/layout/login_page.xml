@@ -3,11 +3,11 @@
     android:id="@+id/login_page_RL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:clickable="false"
     android:focusable="false"
     android:orientation="vertical"
     android:padding="25dp" >
+<!--     android:background="@android:color/white" -->
 
     <ImageView
         android:id="@+id/imageView2"
@@ -55,13 +55,10 @@
         android:layout_marginTop="25dp"
         android:hint="user name"
         android:inputType="textPersonName"
+        android:background="@drawable/custom_bg_grey_radius"
         android:padding="7dp"
         android:typeface="serif" />
-        <!-- android:clickable="false"
-        android:layout_alignParentLeft="false"
-        android:layout_centerVertical="true" -->
 
-<!--         android:layout_centerVertical="true" -->
     <EditText
         android:id="@+id/password_ET"
         android:layout_width="match_parent"
@@ -69,6 +66,7 @@
         android:layout_below="@+id/username_ET"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/custom_bg_grey_radius"
         android:layout_marginTop="10dp"
         android:hint="password"
         android:inputType="textPassword"

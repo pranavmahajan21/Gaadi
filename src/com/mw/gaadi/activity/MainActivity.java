@@ -349,6 +349,7 @@ public class MainActivity extends Activity {
 				} else {
 					emailET.setBackground(getResources().getDrawable(
 							R.drawable.custom_bg_grey_radius));
+//					
 				}
 			}
 		});

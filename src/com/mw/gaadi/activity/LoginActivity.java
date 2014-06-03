@@ -13,6 +13,7 @@ import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
@@ -112,6 +113,35 @@ public class LoginActivity extends Activity {
 				| Intent.FLAG_ACTIVITY_CLEAR_TASK);
 	}
 
+	@SuppressLint("NewApi")
+	private void onFoucusListeners() {
+		usernameET.setOnFocusChangeListener(new OnFocusChangeListener() {
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					usernameET.setBackground(getResources().getDrawable(
+							R.drawable.custom_bg_blue_radius));
+				} else {
+					usernameET.setBackground(getResources().getDrawable(
+							R.drawable.custom_bg_grey_radius));
+				}
+			}
+		});
+
+		passwordET.setOnFocusChangeListener(new OnFocusChangeListener() {
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					passwordET.setBackground(getResources().getDrawable(
+							R.drawable.custom_bg_blue_radius));
+				} else {
+					passwordET.setBackground(getResources().getDrawable(
+							R.drawable.custom_bg_grey_radius));
+				}
+			}
+		});
+
+	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -120,6 +150,7 @@ public class LoginActivity extends Activity {
 		findThings();
 		myOwnListeners();
 		initThings();
+		onFoucusListeners();
 		staticBullshit();
 
 		if (ParseUser.getCurrentUser() != null) {

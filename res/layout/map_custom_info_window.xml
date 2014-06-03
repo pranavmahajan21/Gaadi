@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
 
     <LinearLayout
         android:id="@+id/text_LL"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/button_LL"
         android:orientation="vertical" >
 
         <TextView
             android:id="@+id/title_TV"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="title" />
+            android:text="title"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/snippet_TV"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="snippet" />
+            android:text="snippet"
+            android:typeface="serif" />
 
         <TextView
             android:id="@+id/phone_TV"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:onClick="onCall"
@@ -36,19 +37,21 @@
         android:id="@+id/button_LL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/text_LL"
         android:orientation="vertical" >
 
         <Button
             android:id="@+id/contact_B"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact" 
-            android:onClick="onContact"/>
+            android:background="@drawable/custom_bg_opaque_radius"
+            android:onClick="onContact"
+            android:text="Contact" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom_bg_opaque_radius"
             android:text="Route" />
     </LinearLayout>
 

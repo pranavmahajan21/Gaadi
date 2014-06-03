@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.mw.gaadi.R;
 import com.mw.gaadi.adapter.MyServicesAdapter;
@@ -38,9 +39,10 @@ public class MyServicesActivity extends Activity {
 		editor = sharedPreferences.edit();
 
 		if (sharedPreferences.contains("chassisID")) {
-			aa = sharedPreferences.getString("chassisID", null).split("^^");
+			System.out.println(sharedPreferences.getString("chassisID", null));
+			aa = sharedPreferences.getString("chassisID", null).split("\\^\\^");
 		}
-
+Toast.makeText(this, aa.length+"", Toast.LENGTH_SHORT).show();
 		adapter = new MyServicesAdapter(this, aa);
 		myServicesLV.setAdapter(adapter);
 		myServicesLV.setOnItemClickListener(new OnItemClickListener() {
